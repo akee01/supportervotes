@@ -178,7 +178,7 @@
                         })
                         $(`ul[data-poll-id="${poll_id}"]`).closest('.card-body').find('.vote-count').text(total.toFixed(0));
                         for (let i in votes) {
-                            let perc = parseFloat((votes[i].count / total) * 100)
+                            let perc = (votes[i].count / total) * 100
                             if (i == 0) {
                                 $(`ul[data-poll-id="${poll_id}"] li[data-id="${votes[i].id}"]`).removeClass('text-center vote-open').css('background', `linear-gradient(to right, #2e86a6 ${perc}%, #ffffff ${perc}%)`).append(`<span class="float-end">${perc.toFixed(0)}%</span>`)
                             } else {
