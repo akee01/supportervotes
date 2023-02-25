@@ -169,7 +169,7 @@
                         $(`#poll-${poll_id} li[data-id=${option_id}]`).addClass('my-option')
                         resp.votes.map(vote => {
                             let id = vote.id, count = vote.votes
-                            total += count
+                            total += +count
                             votes.push({
                                 id,
                                 count
@@ -237,14 +237,14 @@
                         $(`#poll-${poll_id} li[data-id=${option_id}]`).addClass('my-option')
                         resp.votes.map(vote => {
                             let id = vote.id, count = vote.votes
-                            total += count
+                            total += +count
                             votes.push({
                                 id,
                                 count
                             });
                             votes.sort((a, b) => a.count > b.count ? -1 : 1)
                         })
-                        $(`ul[data-poll-id="${poll_id}"]`).closest('.card-body').find('.vote-count').text(parseInt(total).toFixed(0));
+                        $(`ul[data-poll-id="${poll_id}"]`).closest('.card-body').find('.vote-count').text(total.toFixed(0));
                         for (let i in votes) {
                             let perc = (votes[i].count / total) * 100
                             if (i == 0) {
