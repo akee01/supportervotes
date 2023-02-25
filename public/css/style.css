@@ -1,0 +1,114 @@
+:root {
+    --bs-light-rgb: 244, 248, 255;
+    --bs-btn-active-bg: 44, 134, 165, 1;
+    --bs-btn-bg: 44, 134, 165, 1;
+    --bs-link-color: 44, 134, 165, 1;
+}
+
+a, a:hover {
+    text-decoration: none;
+    color: rgb(33, 37, 41);
+}
+
+.social-dd::after {
+    content: none;
+}
+
+li.my-option::after {
+    content: '\f00c';
+    font-family: var(--fa-style-family, "Font Awesome 6 Free");
+    position: absolute;
+    left: -8px;
+    background: #fff;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    font-size: 12px;
+    line-height: 1.6;
+    text-align: center;
+    top: 10px;
+    border: 1px solid #ddd;
+    font-weight: 900;
+}
+
+.btn-primary {
+    background-color: rgba(44, 134, 165, 1) !important;
+    border-color: rgba(44, 134, 165, 1) !important;
+}
+
+.text-primary {
+    color: rgba(44, 134, 165, 1) !important;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.btn-outline-primary {
+    border-color: rgba(44, 134, 165, 1) !important;
+    color: rgba(44, 134, 165, 1) !important;
+}
+
+.btn-outline-primary:hover {
+    background-color: rgba(44, 134, 165, 1) !important;
+    color: #fff !important;
+}
+
+.text-muted {
+    color: #3a596a !important;
+}
+
+.main-section {
+    min-height: calc(100vh - 72px - 72px);
+    display: flex;
+    align-items: center;
+}
+
+.form-control.error {
+    border-color: red !important;
+    box-shadow: 0 0 0 .25rem rgba(255, 0, 0, .25);
+}
+
+.profile-pic {
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label.error {
+    font-weight: normal;
+    color: red;
+    font-size: 11px;
+}
+
+label {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.form-control:not(textarea.form-control) {
+    height: 50px;
+    line-height: 2;
+}
+
+.list-group-item:hover {
+
+}
+
+.user-vote li {
+    cursor: pointer;
+}
+
+.user-vote li:hover {
+    background: color(srgb 0.96 0.96 0.96);
+}
+
+.pagination {
+    justify-content: center;
+}
+
+.page-item.active .page-link {
+    background-color: #2c86a6;
+    border-color: #2a86a4;
+}
