@@ -21,10 +21,10 @@
                             <label>Poll closing date</label>
                             <div class="row">
                                 <div class="col-6">
-                                    <input type="date" name="date" class="form-control" value="{{ \Carbon\Carbon::parse($poll->closing_at)->format('Y-m-d') }}">
+                                    <input type="date" name="date" class="form-control" value="{{ $poll->closing_at ? \Carbon\Carbon::parse($poll->closing_at)->format('Y-m-d') : '' }}">
                                 </div>
                                 <div class="col-6">
-                                    <input type="time" name="time" class="form-control" value="{{ \Carbon\Carbon::parse($poll->closing_at)->format('H:i') }}">
+                                    <input type="time" name="time" class="form-control" value="{{ $poll->closing_at ? \Carbon\Carbon::parse($poll->closing_at)->format('H:i') : '' }}">
                                 </div>
                             </div>
                         </div>

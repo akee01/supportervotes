@@ -117,7 +117,7 @@
                     $diff = $obj->diff(\Carbon\Carbon::now());
                 @endphp
                 <div class="text-muted small"><b>Poll ending in: </b>{{ $diff->d.'d '.$diff->h.'h '.$diff->i.'m '.$diff->s.'s ' }}</div>
-            @else
+            @elseif(!is_null($poll->closing_at))
                 <div class="text-muted small"><b>Poll ended</div>
             @endif
         </div>
@@ -153,6 +153,9 @@
                 <span class="text-muted">{{ $v_comment->description }}</span>
             </div>
         @endforeach
+        @if($votes_with_comment->count() === 0)
+            <p class="mb-0 text-muted">No comments</p>
+        @endempty
     @endif
 </div>
 @if(auth()->check() && auth()->id() == $poll->user_id)

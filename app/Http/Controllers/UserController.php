@@ -90,11 +90,18 @@ class UserController extends Controller
         ]);
         try {
             $poll = Poll::findorfail($poll_id);
-            $poll->options()->whereNotIn('id',$request->finalised)->delete();
-            $new_options = array_slice($request->option,count($request->finalised));
-            if (!is_null($request->date) && !is_null($request->time)) {
-                $closing = Carbon::createFromFormat('Y-m-d H:i', $request->date . ' ' . $request->time);
+            if (isset($request->finalised) && ($poll->options->count() > count($request->finalised))) {
+                $poll->options()->whereNotIn('id', $request->finalised)->delete();
+            }else{
+                $poll->options()->delete();
+            }
+            $new_options = array_slice($request->option,isset($request->finalised) ? count($request->finalised) : 0);
+            if (!is_null($request->date)) {
+                $closing = Carbon::createFromFormat('Y-m-d H:i', $request->date . ' ' . ($request->time ?? '23:59'));
                 $poll->closing_at = $closing;
+                $poll->save();
+            }else{
+                $poll->closing_at = null;
                 $poll->save();
             }
             foreach ($new_options as $opt) {
@@ -132,7 +139,7 @@ class UserController extends Controller
         ]);
         $closing = null;
         if (!is_null($request->date)) {
-            $closing = Carbon::createFromFormat('Y-m-d H:i', $request->date . ' ' . $request->time);
+            $closing = Carbon::createFromFormat('Y-m-d H:i', $request->date . ' ' . ($request->time ?? '23:59'));
         }
         try {
             $poll = Poll::create([
@@ -185,6 +192,12 @@ class UserController extends Controller
             'stars' => 'nullable|integer',
             'description' => 'nullable|string'
         ]);
+        if (!is_null($request->stars) && $request->stars < 1){
+            return json_encode([
+                'success' => false,
+                'message' => 'You should use at least one premium vote.'
+            ]);
+        }
         $option = PollOption::findorfail($request->poll_option_id);
         if (PollVote::where(['user_id' => auth()->id(), 'poll_id' => $option->poll->id])->count() > 0) {
             return json_encode([
