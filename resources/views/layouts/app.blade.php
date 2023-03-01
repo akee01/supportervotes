@@ -21,7 +21,7 @@
     <nav class="navbar navbar-expand-sm navbar-light">
         <div class="container-fluid">
             <a class="navbar-brand fw-bold" href="{{ route('home') }}">Supporter<span class="text-primary">Votes</span>.com
-                <small class="small font-weight-normal" style="font-size: 13px;">BETA</small></a>
+                <small class="small font-weight-normal" style="font-size: 21px;">BETA</small></a>
             <ul class="navbar-nav ms-auto flex-row">
                 @guest
                     @if (Route::has('login'))

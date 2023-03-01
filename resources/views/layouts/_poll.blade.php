@@ -58,11 +58,10 @@
             </div>
         </div>
         @if($voted && $u_option?->type == 'premium')
-            <div class="text-end mb-2">Stars <i class="fa fa-star text-warning"></i> spent: {{ $u_option?->stars }}
+            <div class="text-end mb-2">Premium Votes used: {{ $u_option?->stars }}
             </div>
         @else
-            <div id="poll-res-{{ $poll->id }}" class="d-none text-end mb-2">Stars <i
-                    class="fa fa-star text-warning"></i> spent: <span class="spent-count"></span></div>
+            <div id="poll-res-{{ $poll->id }}" class="d-none text-end mb-2">Premium Votes used: <span class="spent-count"></span></div>
         @endif
         <div class="text-danger alert-stars small text-end d-none"></div>
     </div>
@@ -116,7 +115,7 @@
                     $obj = \Carbon\Carbon::parse($poll->closing_at);
                     $diff = $obj->diff(\Carbon\Carbon::now());
                 @endphp
-                <div class="text-muted small"><b>Poll ending in: </b>{{ $diff->d.'d '.$diff->h.'h '.$diff->i.'m '.$diff->s.'s ' }}</div>
+                <div class="text-muted small"><b>Poll ending in: </b>{{ $diff->d.'d '.$diff->h.'h '.$diff->i.'m ' }}</div>
             @elseif(!is_null($poll->closing_at))
                 <div class="text-muted small"><b>Poll ended</div>
             @endif

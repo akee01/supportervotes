@@ -57,7 +57,7 @@
                                             $obj = \Carbon\Carbon::parse($poll->closing_at);
                                             $diff = $obj->diff(\Carbon\Carbon::now());
                                         @endphp
-                                        <div class="text-muted small"><b>Poll ending in: </b>{{ $diff->d.'d '.$diff->h.'h '.$diff->i.'m '.$diff->s.'s ' }}</div>
+                                        <div class="text-muted small"><b>Poll ending in: </b>{{ $diff->d.'d '.$diff->h.'h '.$diff->i.'m ' }}</div>
                                     @elseif(!is_null($poll->closing_at))
                                         <div class="text-muted small"><b>Poll ended</div>
                                     @endif
