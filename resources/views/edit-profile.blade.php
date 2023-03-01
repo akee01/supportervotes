@@ -28,7 +28,7 @@
                             </div>
                             @if(auth()->user()->role == 'creator')
                             <div class="form-group mb-4">
-                                <label>Stars per USD($)</label>
+                                <label>Number of Premium Votes for 1 USD</label>
                                 <input type="number" step="any" class="form-control inp-name" name="star_rate" value="{{ auth()->user()->star_rate }}" required>
                                 @error('star_rate')
                                 <span class="small text-danger" role="alert">

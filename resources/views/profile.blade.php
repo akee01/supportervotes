@@ -23,7 +23,7 @@
                         @if($user->id == auth()->id())
                             <a href="{{ route('profile.edit') }}" class="btn btn-primary">Edit Profile</a>
                             @if(auth()->check() && auth()->user()->role == 'creator')
-                                <h4 class="text-center my-4">Total Money from
+                                <h4 class="text-center my-4">Sum of all
                                     Donations: {{ round($user->balance,2) }} USD</h4>
                             @endif
                         @elseif($user->role == 'creator')
