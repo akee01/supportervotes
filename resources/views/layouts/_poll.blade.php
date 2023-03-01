@@ -58,8 +58,7 @@
             </div>
         </div>
         @if($voted && $u_option?->type == 'premium')
-            <div class="text-end mb-2">Premium Votes used: {{ $u_option?->stars }}
-            </div>
+            <div class="text-end mb-2">Premium Votes used: {{ $u_option?->stars }} <i class="fa fa-star text-warning"></i></div>
         @else
             <div id="poll-res-{{ $poll->id }}" class="d-none text-end mb-2">Premium Votes used: <span class="spent-count"></span></div>
         @endif

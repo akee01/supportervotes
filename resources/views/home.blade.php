@@ -5,14 +5,10 @@
             <div class="row justify-content-center">
                 <div class="col-md-8 p-5 text-center">
                     <h1 class="h2 fw-bold">Welcome to Supporter<span class="text-primary">Votes</span>.com</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At commodi delectus itaque libero
-                        mollitia
-                        natus omnis quae quidem sapiente velit! A aut beatae ea id laudantium nihil repudiandae sint,
-                        suscipit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, consequuntur eaque
-                        error
-                        eum ex exercitationem illum incidunt, ipsa ipsam magnam minima molestias nihil nobis porro
-                        provident
-                        quia repudiandae soluta ullam.</p>
+                    <p>This is a place where Streamers and Content Creators can reveal the most desired content by their subscribers and followers. <span class="text-danger">Discover polls and voting in a brand new way.</span> SupporterVotes.com mixes standard polls with the possibility of using <b>Premium Voting!</b>
+                        Are you a subscriber or a follower and you really want your favorite creator to do a specific content?
+                        <br><u>Here you can make your voice be heard!</u>
+                    </p>
                 </div>
             </div>
         </div>
