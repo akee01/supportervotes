@@ -14,14 +14,16 @@
                                 <label>Select one</label><br>
                                 <div class="d-flex">
                                     <div class="form-check">
-                                        <input class="form-check-input mb-0" type="radio" value="creator" name="role" id="role1" checked>
-                                        <label class="form-check-label mb-0 fw-normal" for="role1">I am Content Creator</label>
-                                    </div>
-                                    <div class="form-check ms-3">
-                                        <input class="form-check-input mb-0" type="radio" value="supporter" name="role" id="role2">
+                                        <input class="form-check-input mb-0" type="radio" value="supporter" name="role" id="role2" checked>
                                         <label class="form-check-label mb-0 fw-normal" for="role2">I want to follow and vote</label>
                                     </div>
                                 </div>
+								<div class="d-flex">
+								    <div class="form-check">
+                                        <input class="form-check-input mb-0" type="radio" value="creator" name="role" id="role1">
+                                        <label class="form-check-label mb-0 fw-normal" for="role1">I am Content Creator</label>
+                                    </div>
+								</div>
                             </div>
                             <div class="form-group mb-4">
                                 <label>Name</label>
