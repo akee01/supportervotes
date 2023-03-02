@@ -17,6 +17,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/clear-cache', function () {
+    \Artisan::call('optimize:clear');
+});
+
 Auth::routes();
 Route::get('/', [HomeController::class, 'index'])->name('home');
 // profile
