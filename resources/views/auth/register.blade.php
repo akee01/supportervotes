@@ -11,17 +11,17 @@
                             @csrf
                             <h2 class="h3 mb-3 fw-bold">Register an account.</h2>
                             <div class="form-group mb-3">
-                                <label>Select one</label><br>
+                                <label>What type of account you want to create? Select one:</label><br>
                                 <div class="d-flex">
                                     <div class="form-check">
                                         <input class="form-check-input mb-0" type="radio" value="supporter" name="role" id="role2" checked>
-                                        <label class="form-check-label mb-0 fw-normal" for="role2">I want to follow and vote</label>
+                                        <label class="form-check-label mb-0 fw-normal" for="role2">I want to vote in polls published by the Creators</label>
                                     </div>
                                 </div>
 								<div class="d-flex">
 								    <div class="form-check">
                                         <input class="form-check-input mb-0" type="radio" value="creator" name="role" id="role1">
-                                        <label class="form-check-label mb-0 fw-normal" for="role1">I am Content Creator</label>
+                                        <label class="form-check-label mb-0 fw-normal" for="role1">I am Content Creator and I want to create polls for my subscribers</label>
                                     </div>
 								</div>
                             </div>
