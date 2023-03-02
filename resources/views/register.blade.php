@@ -37,15 +37,15 @@
                         <div class="form-group mb-3">
                             <label>Select one</label><br>
                             <div class="d-flex">
-                                <div class="form-check">
-                                    <input class="form-check-input mb-0" type="radio" name="role" id="role1" checked>
+                                <div class="form-check ms-3">
+                                    <input class="form-check-input mb-0" type="radio" name="role" id="role2" checked>
+                                    <label class="form-check-label mb-0 fw-normal" for="role2">I want to vote in 
+                                        polls</label>
+                                </div>                                
+								<div class="form-check">
+                                    <input class="form-check-input mb-0" type="radio" name="role" id="role1">
                                     <label class="form-check-label mb-0 fw-normal" for="role1">I am Content
                                         Creator</label>
-                                </div>
-                                <div class="form-check ms-3">
-                                    <input class="form-check-input mb-0" type="radio" name="role" id="role2">
-                                    <label class="form-check-label mb-0 fw-normal" for="role2">I want to follow and
-                                        vote</label>
                                 </div>
                             </div>
                         </div>
